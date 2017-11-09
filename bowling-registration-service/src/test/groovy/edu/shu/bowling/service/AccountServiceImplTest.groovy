@@ -26,4 +26,21 @@ class AccountServiceImplTest extends Specification {
         then: "registed account should be return"
         result.firstName == "Jignesh1"
     }
+    
+     def "Register Account Service with wrong data"() {
+
+        given: "a account"
+        def account = new Account()
+        account.setUserId("jignesh1")
+        account.setFirstName("Jignesh1")
+        account.setLastName("Togadiya1")
+        account.setBirthDate(new Date())
+        account.setEmail("about1")
+        account.setPhone("203555xxxx")
+        account.setPassword("@df#Asder123")
+        when: "account is registered"
+        def result = accountService.register(account)
+        then: "registed account should be return"
+        result.firstName == "Jignesh1"
+    }
 }
