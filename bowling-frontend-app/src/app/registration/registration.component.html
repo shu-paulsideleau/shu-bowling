@@ -1,10 +1,12 @@
+<div class="container">
+  <form>
 <table border="0" width="100%">
   <tr>
     <td align="center">
       <table>
 
         <tr >
-          <td colspan="2">
+          <td colspan="3">
             <h1><b>Bowling System Registration:</b></h1>
           </td>
         </tr>
@@ -13,7 +15,14 @@
             First Name :
           </td>
           <td>
-            <input type="text"  [(ngModel)]="userAccount.firstName"  placeholder="Enter first name here">
+            <input type="text" id="firstName" name="firstName" #firstName="ngModel" [(ngModel)]="userAccount.firstName"  placeholder="Enter first name here" required>
+          </td>
+          <td>
+            <div *ngIf="firstName.errors && (firstName.dirty || firstName.touched)" >
+              <div [hidden]="!firstName.errors.required" class="errorValidation">
+                FirstName is required!
+              </div>
+            </div>
           </td>
         </tr>
         <tr>
@@ -21,7 +30,14 @@
             Last Name :
           </td>
           <td>
-            <input type="text"  [(ngModel)]="userAccount.lastName"  placeholder="Enter last name here">
+            <input type="text" id="lastName"  name="lastName" #lastName="ngModel" [(ngModel)]="userAccount.lastName"  placeholder="Enter last name here" required>
+          </td>
+          <td>
+            <div *ngIf="lastName.errors && (lastName.dirty || lastName.touched)" >
+              <div [hidden]="!lastName.errors.required" class="errorValidation">
+                lastName is required!
+              </div>
+            </div>
           </td>
         </tr>
         <tr>
@@ -29,7 +45,14 @@
             Birth Date :
           </td>
           <td>
-            <input type="date"  [(ngModel)]="userAccount.birthDate"  placeholder="Enter birth date here">
+            <input type="date" id="birthDate" name="birthDate" #birthDate="ngModel" [(ngModel)]="userAccount.birthDate"  placeholder="Enter birth date here" required>
+          </td>
+          <td>
+            <div *ngIf="birthDate.errors && (birthDate.dirty || birthDate.touched)" >
+              <div [hidden]="!birthDate.errors.required" class="errorValidation">
+                birthDate is required!
+              </div>
+            </div>
           </td>
         </tr>
         <tr>
@@ -37,7 +60,14 @@
             Email :
           </td>
           <td>
-            <input type="text" [(ngModel)]="userAccount.email" placeholder="Enter email here">
+            <input type="email" id="email" name="email" #email="ngModel" [(ngModel)]="userAccount.email" placeholder="Enter email here" required>
+          </td>
+          <td>
+            <div *ngIf="email.errors && (email.dirty || email.touched)" >
+              <div [hidden]="!email.errors.required" class="errorValidation">
+                email is required!
+              </div>
+            </div>
           </td>
         </tr>
         <tr>
@@ -45,7 +75,14 @@
             Phone Number :
           </td>
           <td>
-            <input type="text" [(ngModel)]="userAccount.phoneNumber" placeholder="Enter phone number here">
+            <input type="text" id="phoneNumber" name="phoneNumber" #phoneNumber="ngModel" [(ngModel)]="userAccount.phoneNumber" placeholder="Enter phone number here" required>
+          </td>
+          <td>
+            <div *ngIf="phoneNumber.errors && (phoneNumber.dirty || phoneNumber.touched)" >
+              <div [hidden]="!phoneNumber.errors.required" class="errorValidation">
+                phoneNumber is required!
+              </div>
+            </div>
           </td>
         </tr>
         <tr>
@@ -53,7 +90,14 @@
             UserId :
           </td>
           <td>
-            <input type="text"  [(ngModel)]="userAccount.userId"  placeholder="Enter userid here">
+            <input type="text" id="userId" name="userId" #userId="ngModel" [(ngModel)]="userAccount.userId"  placeholder="Enter userid here" required>
+          </td>
+          <td>
+            <div *ngIf="userId.errors && (userId.dirty || userId.touched)" >
+              <div [hidden]="!userId.errors.required" class="errorValidation">
+                userId is required!
+              </div>
+            </div>
           </td>
         </tr>
         <tr>
@@ -61,7 +105,14 @@
             Password :
           </td>
           <td>
-            <input type="password"[(ngModel)]="userAccount.password" placeholder="Enter password here">
+            <input type="password" id="password" name="password" #password="ngModel" [(ngModel)]="userAccount.password" placeholder="Enter password here" required>
+          </td>
+          <td>
+            <div *ngIf="password.errors && (password.dirty || password.touched)" >
+              <div [hidden]="!password.errors.required" class="errorValidation">
+                password is required!
+              </div>
+            </div>
           </td>
         </tr>
         <tr>
@@ -75,3 +126,5 @@
     </td>
   </tr>
 </table>
+  </form>
+</div>
