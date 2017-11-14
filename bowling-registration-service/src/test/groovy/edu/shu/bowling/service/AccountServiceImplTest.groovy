@@ -74,6 +74,7 @@ class AccountServiceImplTest extends Specification {
 
         given: "an account"
         def account4 = new Account()
+        when: "account is registered"
         account4.setUserId("r&#)1!8")
         account4.setFirstName("Jignesh")
         account4.setLastName("Togadiya")
@@ -81,7 +82,6 @@ class AccountServiceImplTest extends Specification {
         account4.setEmail("rob@aol.com")
         account4.setPhone("2035554442")
         account4.setPassword("@df#Asder123")
-        when: "account is registered"
         def result4 = accountService.register(account4)
         then: "should throw exception"
         final UserIDException exception = thrown()
@@ -100,8 +100,8 @@ class AccountServiceImplTest extends Specification {
         account5.setBirthDate(new Date())
         account5.setEmail("rob2@aol.com")
         account5.setPhone("2035551442")
-        account5.setPassword("password1")
         when: "account is registered"
+        account5.setPassword("password1")
         def result5 = accountService.register(account5)
         then: "should throw exception"
         final PasswordComplexityException exception = thrown()
