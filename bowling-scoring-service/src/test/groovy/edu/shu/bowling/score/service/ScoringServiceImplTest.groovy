@@ -410,13 +410,13 @@ class ScoringServiceImplTest extends Specification {
         1   |   5
         2   |   13
         3   |   13
-        4   |   35
-        5   |   35
-        6   |   55
-        7   |   55
-        8   |   55
-        9   |   75
-        10  |   95
+        4   |   31
+        5   |   31
+        6   |   51
+        7   |   51
+        8   |   51
+        9   |   65
+        10  |   83
 
     }
 
@@ -495,7 +495,7 @@ class ScoringServiceImplTest extends Specification {
         7   |   48
         8   |   52
         9   |   52
-        10  |   77
+        10  |   72
 
     }
 
