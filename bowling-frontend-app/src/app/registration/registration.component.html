@@ -20,7 +20,7 @@
           <td>
             <div *ngIf="firstName.errors && (firstName.dirty || firstName.touched)" >
               <div [hidden]="!firstName.errors.required" class="errorValidation">
-                FirstName is required!
+                First Name is required!
               </div>
             </div>
           </td>
@@ -35,7 +35,7 @@
           <td>
             <div *ngIf="lastName.errors && (lastName.dirty || lastName.touched)" >
               <div [hidden]="!lastName.errors.required" class="errorValidation">
-                lastName is required!
+                Last Name is required!
               </div>
             </div>
           </td>
@@ -50,7 +50,7 @@
           <td>
             <div *ngIf="birthDate.errors && (birthDate.dirty || birthDate.touched)" >
               <div [hidden]="!birthDate.errors.required" class="errorValidation">
-                birthDate is required!
+                Birth Date is required!
               </div>
             </div>
           </td>
@@ -65,7 +65,7 @@
           <td>
             <div *ngIf="email.errors && (email.dirty || email.touched)" >
               <div [hidden]="!email.errors.required" class="errorValidation">
-                email is required!
+                Email is required!
               </div>
             </div>
           </td>
@@ -75,27 +75,27 @@
             Phone Number :
           </td>
           <td>
-            <input type="text" id="phoneNumber" name="phoneNumber" #phoneNumber="ngModel" [(ngModel)]="userAccount.phoneNumber" placeholder="Enter phone number here" required>
+            <input type="text" id="phoneNumber" name="phoneNumber" #phoneNumber="ngModel" [(ngModel)]="userAccount.phoneNumber" placeholder="Enter phone # here" required>
           </td>
           <td>
             <div *ngIf="phoneNumber.errors && (phoneNumber.dirty || phoneNumber.touched)" >
               <div [hidden]="!phoneNumber.errors.required" class="errorValidation">
-                phoneNumber is required!
+                Phone Number is required!
               </div>
             </div>
           </td>
         </tr>
         <tr>
           <td>
-            UserId :
+            User ID :
           </td>
           <td>
-            <input type="text" id="userId" name="userId" #userId="ngModel" [(ngModel)]="userAccount.userId"  placeholder="Enter userid here" required>
+            <input type="text" id="userId" name="userId" #userId="ngModel" [(ngModel)]="userAccount.userId"  placeholder="Enter User ID here" required>
           </td>
           <td>
             <div *ngIf="userId.errors && (userId.dirty || userId.touched)" >
               <div [hidden]="!userId.errors.required" class="errorValidation">
-                userId is required!
+                User ID is required!
               </div>
             </div>
           </td>
@@ -110,7 +110,7 @@
           <td>
             <div *ngIf="password.errors && (password.dirty || password.touched)" >
               <div [hidden]="!password.errors.required" class="errorValidation">
-                password is required!
+                Password is required!
               </div>
             </div>
           </td>
